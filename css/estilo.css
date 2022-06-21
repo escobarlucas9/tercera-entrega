@@ -1,0 +1,869 @@
+/*Pagina principal*/
+.contenedor {
+  display: grid;
+  grid-template-areas: "header header"
+    "main main"
+    "aside articleParrafo"
+    "articleIndex articleIndex"
+    "footer footer";
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto 1fr 1fr auto;
+}
+
+header .navbar-brand {
+  font-family: "Cantata One", serif;
+}
+
+header nav ul li {
+  font-size: 1.2rem;
+}
+
+header a {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/*main de index*/
+.mainIndex {
+  grid-area: main;
+}
+
+.mainIndex div {
+  display: flex;
+  background-color: red;
+}
+
+.mainIndex .barba {
+  width: 50%;
+}
+
+.mainIndex .peine {
+  width: 20%;
+  height: 30%;
+  position: relative;
+  top: 7rem;
+  left: 15rem;
+}
+
+.mainIndex h1 {
+  color: white;
+  font-size: 8rem;
+  font-family: "Cantata One", serif;
+}
+
+/*aside de index*/
+.asideIndex {
+  grid-area: aside;
+}
+
+.asideIndex h2 {
+  color: white;
+  font-size: 6rem;
+  text-align: left;
+  margin-left: 2rem;
+  margin-top: 3rem;
+  font-family: "Cantata One", serif;
+}
+
+.asideIndex .silla {
+  background-color: red;
+  width: 300px;
+  height: 250px;
+  position: relative;
+  top: 3rem;
+  left: 3rem;
+  transition: all 2s;
+}
+
+.asideIndex .cepillo {
+  width: 300px;
+  position: relative;
+  top: 2.5rem;
+  left: 3rem;
+}
+
+.asideIndex .silla:hover {
+  position: relative;
+  left: 5rem;
+  top: 5rem;
+}
+
+/* article de index*/
+.articleIndex {
+  grid-area: articleIndex;
+  display: flex;
+  padding-bottom: 6rem;
+}
+
+.articleIndex p {
+  text-align: center;
+  font-size: 2rem;
+  padding: 50px;
+  font-family: 'Dancing Script', cursive;
+  letter-spacing: 8px;
+  color: white;
+  margin-top: 6rem;
+}
+
+.articleIndex img {
+  width: 350px;
+  position: relative;
+  top: 3rem;
+  right: 2rem;
+  transition: all 2s;
+}
+
+.articleIndex img:hover {
+  transform: scale(0.2);
+}
+
+.articleParrafo {
+  grid-area: articleParrafo;
+}
+
+.articleParrafo p {
+  text-align: right;
+  line-height: 2.5rem;
+  padding: 2rem;
+  color: white;
+  margin-top: 10rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+footer {
+  grid-area: footer;
+  background-color: black;
+  padding: 1rem;
+}
+
+footer p {
+  color: white;
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .contenedor {
+    display: grid;
+    grid-template-areas: "header header"
+      "main main"
+      "aside articleParrafo"
+      "articleIndex articleIndex"
+      "footer footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 2fr auto auto;
+  }
+
+  .peine {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contenedor {
+    display: grid;
+    grid-template-areas: "header"
+      "main"
+      "aside"
+      "articleParrafo"
+      "articleIndex"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 2fr auto auto;
+  }
+
+  .peine {
+    display: none;
+  }
+
+  .mainIndex h1 {
+    font-size: 4rem;
+  }
+
+  .asideIndex h2 {
+    font-size: 3rem;
+  }
+
+  .parrafoUno {
+    text-align: center;
+  }
+
+  .articleIndex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .silla {
+    position: relative;
+    top: 3rem;
+    left: 1rem;
+  }
+
+  .silla img {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .contenedor {
+    display: grid;
+    grid-template-areas: "header"
+      "main"
+      "aside"
+      "articleParrafo"
+      "articleIndex"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 2fr auto auto;
+  }
+
+  .peine {
+    display: none;
+  }
+
+  .mainIndex h1 {
+    font-size: 2.5rem;
+  }
+
+  .asideIndex h2 {
+    font-size: 3rem;
+  }
+
+  .parrafoUno {
+    text-align: center;
+  }
+
+  .articleIndex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .silla {
+    position: relative;
+    top: 3rem;
+    }
+
+  .cepillo {
+    width: 250px;
+    position: relative;
+    top: 2.5rem;
+    
+  }
+  .asideIndex .silla:hover {
+    position: relative;
+    left: 1rem;
+    top: 5rem;
+  }
+}
+
+/*Pagina de colecciones*/
+.contenedorColecciones {
+  display: grid;
+  grid-template-areas: "header header"
+    "main main"
+    "aside article"
+    "footer footer";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+.headerColecciones {
+  grid-area: header;
+}
+
+.mainColecciones {
+  grid-area: main;
+}
+
+.mainColecciones div {
+  width: 100%;
+}
+
+.mainColecciones img {
+  width: 100%;
+  height: 60%;
+}
+
+.asideColecciones {
+  grid-area: aside;
+}
+
+.asideColecciones h1 {
+  color: white;
+  font-family: "Cantata One", serif;
+  text-align: center;
+  margin-top: 3rem;
+  text-decoration: underline;
+  animation-duration: 2s;
+  animation-name: aparecer;
+  animation-iteration-count: infinite;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.asideColecciones p {
+  color: white;
+  margin-top: 3rem;
+  line-height: 2.5rem;
+  margin-left: 1rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/*article de colecciones*/
+.articleColecciones {
+  grid-area: article;
+}
+
+.articleColecciones .carousel-inner {
+  margin-top: 5rem;
+}
+
+article {
+  grid-area: article;
+}
+
+article .mb-3 h2 {
+  color: white;
+  text-align: center;
+  font-family: "Cantata One", serif;
+}
+
+article label {
+  color: white;
+}
+
+.footerColecciones {
+  grid-area: footer;
+  padding-top: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+  .contenedorColecciones {
+    display: grid;
+    grid-template-areas: "header"
+      "main"
+      "aside"
+      "article"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 2fr auto auto;
+  }
+
+  header nav ul li {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  header nav ul li {
+    width: 100px;
+    list-style-type: none;
+  }
+}
+
+/*Pagina de clientes*/
+.contenedorClientes {
+  display: grid;
+  grid-template-areas: "header header"
+    "main main"
+    "aside aside"
+    "article article"
+    "footer footer";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr auto;
+}
+
+.headerClientes {
+  grid-area: header;
+}
+
+/*main de clientes*/
+.mainClientes {
+  grid-area: main;
+}
+
+.mainClientes .contenedorMain {
+  width: 100%;
+}
+
+.mainClientes .contenedorMain img {
+  width: 100%;
+  height: 50%;
+}
+
+/*aside de clientes*/
+.asideClientes {
+  grid-area: aside;
+  padding-top: 3rem;
+}
+
+.asideClientes h1 {
+  text-align: center;
+  font-family: "Cantata One", serif;
+  font-size: 3rem;
+  color: white;
+  margin-top: 2rem;
+  text-decoration: underline;
+  animation-duration: 2s;
+  animation-name: aparecer;
+  animation-iteration-count: infinite;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.asideClientes p {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+/*article de clientes*/
+.articleClientes {
+  grid-area: article;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 3rem;
+}
+
+.articleClientes .card {
+  width: 30%;
+}
+
+.articleClientes .card {
+  background-color: black;
+  margin-left: 2rem;
+}
+
+.articleClientes h5 {
+  color: white;
+}
+
+.articleClientes p {
+  color: white;
+}
+
+.articleClientes .text-muted {
+  color: grey;
+}
+
+.articleClientes img {
+  width: 300px;
+  height: 300px;
+}
+
+.footerClientes {
+  grid-area: footer;
+}
+
+@media screen and (max-width: 600px) {
+  .contenedorClientes {
+    display: grid;
+    grid-template-areas: "header"
+      "main"
+      "aside"
+      "article"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 2fr auto auto;
+  }
+
+  .articleClientes {
+    grid-area: article;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+}
+
+/*Pagina de servicios*/
+.contenedorServicios {
+  display: grid;
+  grid-template-areas: " header header"
+    "main main"
+    "aside section"
+    "article article"
+    "footer footer";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto 1fr 1fr auto;
+}
+
+.headerServicios {
+  grid-area: header;
+}
+
+/*main de servicios*/
+.mainServicios {
+  grid-area: main;
+}
+
+.mainServicios div {
+  height: 80%;
+  width: 100%;
+  padding: 15rem;
+  background-image: url(../img/barberia_byn.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.mainServicios h1 {
+  text-align: center;
+  color: white;
+  font-family: 'Bree Serif', serif;
+  position: relative;
+  bottom: 10rem;
+  letter-spacing: 1rem;
+}
+
+.mainServicios p {
+  color: white;
+  text-align: center;
+  margin: 3rem;
+  font-size: 2rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.mainServicios .precios {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  text-decoration: underline;
+  animation-duration: 2s;
+  animation-name: aparecer;
+  animation-iteration-count: infinite;
+  font-family: "Cantata One", serif;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* aside de servicios*/
+.asideServicios {
+  grid-area: aside;
+  margin: 2rem;
+  padding-top: 2rem;
+}
+
+.asideServicios p {
+  color: white;
+  margin: 2rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.senior,
+.sectionServicios h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  text-decoration: underline;
+  font-family: "Cantata One", serif;
+}
+
+/*section de servicios*/
+.sectionServicios {
+  grid-area: section;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.sectionServicios h4 {
+  color: #494848;
+  font-size: 1.3rem;
+  margin: 1rem;
+  text-align: left;
+  font-family: "Cantata One", serif;
+}
+
+.sectionServicios p {
+  color: white;
+  text-align: left;
+  margin-right: 1rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/*article de aservicios*/
+.articleServicios {
+  grid-area: article;
+  padding-top: 6rem;
+  padding-bottom: 8rem;
+}
+
+.articleServicios h2 {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 5rem;
+  text-decoration: underline;
+  animation-duration: 2s;
+  animation-name: aparecer;
+  animation-iteration-count: infinite;
+  font-family: 'Cantata One', serif;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.articleServicios .imagenesServicios {
+  display: flex;
+}
+
+.articleServicios img {
+  width: 250px;
+  transition: all 2s;
+}
+
+.articleServicios img:hover {
+  transform: rotateX(70deg);
+  opacity: -4;
+}
+
+.articleServicios .contenedorPrimero {
+  width: 20%;
+  margin-right: 4rem;
+  margin-left: 2rem;
+}
+
+.articleServicios .contenedorSegundo {
+  width: 20%;
+  margin-right: 4rem;
+}
+
+.articleServicios .contenedorTercero {
+  width: 20%;
+  margin-right: 4rem;
+}
+
+.articleServicios .contenedorCuarto {
+  width: 20%;
+  margin-right: 5rem;
+}
+
+.articleServicios p {
+  color: white;
+  margin-top: 1rem;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.footerServicios {
+  grid-area: footer;
+}
+
+@media screen and (max-width: 600px) {
+  .contenedorServicios {
+    display: grid;
+    grid-template-areas: "header"
+      "aside"
+      "section"
+      "article"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto auto;
+  }
+
+  .asideServicios {
+    margin-top: 10rem;
+  }
+
+  .sectionServicios {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+
+  .imagenesServicios {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mainServicios {
+    display: none;
+  }
+
+  .articleServicios h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/*Pagina de contacto*/
+.contenedor__contacto {
+  display: grid;
+  grid-template-areas: "header header"
+    "main main"
+    "aside section"
+    "article article"
+    "footer footer";
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: auto 1fr 1fr auto;
+}
+
+.headerContacto {
+  grid-area: header;
+}
+
+/*main de contacto*/
+.mainContacto {
+  grid-area: main;
+}
+
+.mainContacto div {
+  width: 100%;
+}
+
+.mainContacto img {
+  width: 100%;
+  height: 40%;
+}
+
+/*aside de contacto*/
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.asideContacto {
+  grid-area: aside;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.asideContacto h1 {
+  color: white;
+  font-size: 2.5rem;
+  text-align: left;
+  font-family: "Cantata One", serif;
+  margin-top: 2rem;
+  text-decoration: underline;
+  animation-duration: 2s;
+  animation-name: aparecer;
+  animation-iteration-count: infinite;
+}
+
+.asideContacto .medios {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: white;
+  margin-left: 1rem;
+  font-family: sans-serif;
+  margin-bottom: 2rem;
+}
+
+.asideContacto .emojis {
+  color: white;
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
+}
+
+.asideContacto img {
+  width: 50px;
+}
+
+/*section de contacto*/
+.sectionContacto {
+  grid-area: section;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.sectionContacto h2 {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: "Cantata One", serif;
+  margin-top: 2rem;
+  text-decoration: underline;
+  animation-duration: 2s;
+  animation-name: aparecer;
+  animation-iteration-count: infinite;
+}
+
+.sectionContacto p {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 4rem;
+}
+
+.footerContacto {
+  grid-area: footer;
+}
+
+@media screen and (max-width: 600px) {
+  .contenedor__contacto {
+    display: grid;
+    grid-template-areas: "header"
+      "main"
+      "aside"
+      "section"
+      "article"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 2fr auto auto;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .contenedor__contacto {
+    display: grid;
+    grid-template-areas: "header"
+      "main"
+      "aside"
+      "section"
+      "article"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 2fr auto auto;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}

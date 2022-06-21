@@ -1,0 +1,129 @@
+/*Pagina de contacto*/
+.contenedor__contacto {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "aside section"
+        "article article"
+        "footer footer";
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: auto 1fr 1fr auto;
+}
+
+
+.headerContacto {
+    grid-area: header;
+}
+/*main de contacto*/
+
+.mainContacto {
+    grid-area: main;
+    div {
+        width: $ancho;
+    }
+    
+     img {
+        width: $ancho;
+        height: 40%;
+    }
+}
+/*aside de contacto*/
+@mixin titulo ($alineacion) {
+    color: $colorletra;
+        font-size: 2.5rem;
+        text-align: $alineacion;
+        font-family: $letratitulo;
+        margin-top: 2rem;
+        text-decoration: underline;
+        animation-duration: 2s;
+        animation-name: aparecer;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes aparecer {
+        0% {
+            opacity: 0;
+        }
+    
+        100% {
+            opacity: 1;
+        }
+    }
+
+.asideContacto {
+    grid-area: aside;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+     h1 {
+       @include titulo ($alineacion1)
+    }
+    
+    .medios {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        color: $colorletra;
+        margin-left: 1rem;
+        font-family: sans-serif;
+        margin-bottom: 2rem;
+    }
+    
+     .emojis {
+        color: $colorletra;
+        margin-bottom: 1.5rem;
+        margin-left: 1rem;
+    }
+     img {
+        width: 50px;
+    
+    }
+}
+/*section de contacto*/
+
+.sectionContacto {
+    grid-area: section;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+     h2 {
+     @include titulo ($alineacion)
+    }
+    p {
+        color: $colorletra;
+        font-family: $letraparrafo;
+        text-align: center;
+        margin-bottom: 3rem;
+        margin-top: 4rem;
+    }
+}
+
+.footerContacto {
+    grid-area: footer;
+}
+@media screen and (max-width:600px) {
+    .contenedor__contacto {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "main"
+            "aside"
+            "section"
+            "article"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 2fr auto auto;
+ }
+}
+@media screen and (max-width:380px) {
+    .contenedor__contacto {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "main"
+            "aside"
+            "section"
+            "article"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 2fr auto auto;
+ }
+}

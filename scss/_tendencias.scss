@@ -1,0 +1,113 @@
+/*Pagina de colecciones*/
+.contenedorColecciones {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "aside article"
+        "footer footer";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+
+
+
+.headerColecciones {
+    grid-area: header;
+}
+.mainColecciones {
+    grid-area: main;
+    div {
+        width: $ancho;
+    }
+    
+     img {
+        width: $ancho;
+        height: 60%;
+    }
+}
+.asideColecciones {
+    grid-area: aside;
+
+    h1 {
+        color: $colorletra;
+        font-family: $letratitulo;
+        text-align: center;
+        margin-top: 3rem;
+        text-decoration: underline;
+        animation-duration: 2s;
+        animation-name: aparecer;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes aparecer {
+        0% {
+            opacity: 0;
+        }
+    
+        100% {
+            opacity: 1;
+        }
+    }
+    
+     p {
+        color: $colorletra;
+        margin-top: 3rem;
+        line-height: 2.5rem;
+        margin-left: 1rem;
+        font-family: $letraparrafo;
+    }
+    
+}
+/*article de colecciones*/
+
+.articleColecciones {
+    grid-area: article;
+    
+    .carousel-inner {
+        margin-top: 5rem;
+    }
+    
+}
+article {
+    grid-area: article;
+    .mb-3 h2 {
+        color: $colorletra;
+        text-align: center;
+        font-family: $letratitulo;
+    }
+    
+    label {
+        color: $colorletra;
+    }
+    
+}
+
+.footerColecciones {
+    grid-area: footer;
+    padding-top: 3rem;
+}
+@media screen and (max-width:600px) {
+    .contenedorColecciones {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "main"
+            "aside"
+            "article"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 2fr auto auto;
+    }
+
+    header nav ul li {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    header nav ul li {
+        width: 100px;
+        list-style-type: none;
+    }
+}

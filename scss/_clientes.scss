@@ -1,0 +1,126 @@
+/*Pagina de clientes*/
+.contenedorClientes {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "aside aside"
+        "article article"
+        "footer footer";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr auto;
+}
+
+
+
+.headerClientes {
+    grid-area: header;
+}
+/*main de clientes*/
+
+.mainClientes {
+    grid-area: main;
+    .contenedorMain {
+        width: $ancho;
+    }
+    
+    .contenedorMain img {
+        width: $ancho;
+        height: 50%;
+    }
+    
+}
+/*aside de clientes*/
+
+.asideClientes {
+    grid-area: aside;
+    padding-top: 3rem;
+   
+     h1 {
+        text-align: center;
+        font-family: $letratitulo;
+        font-size: 3rem;
+        color: $colorletra;
+        margin-top: 2rem;
+        text-decoration: underline;
+        animation-duration: 2s;
+        animation-name: aparecer;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes aparecer {
+        0% {
+            opacity: 0;
+        }
+    
+        100% {
+            opacity: 1;
+        }
+    }
+    
+     p {
+        color: $colorletra;
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: $letraparrafo;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+    }
+    
+}
+/*article de clientes*/
+
+.articleClientes {
+    grid-area: article;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 3rem;
+    .card {
+        width: 30%;
+    }
+    
+     .card {
+        background-color: $colorfondo;
+        margin-left: 2rem;
+    }
+    
+    h5 {
+        color: $colorletra;
+    }
+    
+    p {
+        color: $colorletra;
+    }
+    
+    .text-muted {
+        color: grey;
+    }
+   img {
+        width: 300px;
+        height: 300px;
+    
+    }
+}
+.footerClientes {
+    grid-area: footer;
+}
+@media screen and (max-width:600px) {
+    .contenedorClientes {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "main"
+            "aside"
+            "article"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 2fr auto auto;
+    }
+
+    .articleClientes {
+        grid-area: article;
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem
+    }
+}

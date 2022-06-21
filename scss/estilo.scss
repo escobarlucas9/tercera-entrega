@@ -1,0 +1,24 @@
+$letratitulo:  'Cantata One', serif;
+$letraparrafo: 'Times New Roman', Times, serif;
+$colorfondo: rgb(0, 0, 0);
+$colorletra: rgb(255, 255, 255);
+$ancho: 100%;
+$tamaño: 500px;
+$alineacion: center;
+$alineacion1: left;
+
+@import "index";
+@import "tendencias";
+@import "clientes";
+@import "servicios";
+@import "contacto";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $colorfondo;
+}

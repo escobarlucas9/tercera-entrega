@@ -1,0 +1,233 @@
+/*Pagina de servicios*/
+
+.contenedorServicios {
+    display: grid;
+    grid-template-areas:
+        " header header"
+        "main main"
+        "aside section"
+        "article article"
+        "footer footer";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr 1fr auto;
+}
+
+.headerServicios {
+    grid-area: header;
+}
+/*main de servicios*/
+
+.mainServicios {
+    grid-area: main;
+     div {
+        height: 80%;
+        width: $ancho;
+        padding: 15rem;
+        background-image: url(../img/barberia_byn.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    
+     h1 {
+        text-align: center;
+        color: $colorletra;
+        font-family: 'Bree Serif', serif;
+        position: relative;
+        bottom: 10rem;
+        letter-spacing: 1rem;
+    }
+    
+    p {
+        color: $colorletra;
+        text-align: center;
+        margin: 3rem;
+        font-size: 2rem;
+        font-family: $letraparrafo;
+    }
+    
+    .precios {
+        color: $colorletra;
+        text-align: center;
+        font-size: 2rem;
+        text-decoration: underline;
+        animation-duration: 2s;
+        animation-name: aparecer;
+        animation-iteration-count: infinite;
+        font-family: $letratitulo;
+    }
+    
+    @keyframes aparecer {
+        0% {
+            opacity: 0;
+        }
+    
+        100% {
+            opacity: 1;
+        }
+    }
+}
+/* aside de servicios*/
+.asideServicios {
+    grid-area: aside;
+    margin: 2rem;
+    padding-top: 2rem;
+    p {
+        color: $colorletra;
+        margin: 2rem;
+        font-family: $letraparrafo;
+    }
+}
+     .senior {
+        color: $colorletra;
+        font-size: 1.5rem;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+        text-decoration: underline;
+        font-family: $letratitulo;
+    }
+    
+ 
+
+/*section de servicios*/
+
+.sectionServicios {
+    grid-area: section;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    
+    h3 {
+       @extend .senior;
+       }
+    
+     h4 {
+        color: rgb(73, 72, 72);
+        font-size: 1.3rem;
+        margin: 1rem;
+        text-align: left;
+        font-family: $letratitulo;
+    }
+    
+    p {
+        color: $colorletra;
+        text-align: left;
+        margin-right: 1rem;
+        font-family: $letraparrafo;
+    }
+}
+/*article de aservicios*/
+
+.articleServicios {
+    grid-area: article;
+    padding-top: 6rem;
+    padding-bottom: 8rem;
+
+     h2 {
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 5rem;
+        text-decoration: underline;
+        animation-duration: 2s;
+        animation-name: aparecer;
+        animation-iteration-count: infinite;
+        font-family: 'Cantata One', serif;
+    }
+       
+    
+    
+    @keyframes aparecer {
+        0% {
+            opacity: 0;
+        }
+    
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    .imagenesServicios {
+        display: flex;
+    }
+    
+    img {
+        width: $tamaño/2;
+        transition: all 2s;
+    }
+    
+    img:hover {
+        transform: rotateX(70deg);
+        opacity: -4;
+    }
+    
+    .contenedorPrimero {
+        width: 20%;
+        margin-right: 4rem;
+        margin-left: 2rem;
+    }
+    
+    .contenedorSegundo {
+        width: 20%;
+        margin-right: 4rem;
+    }
+    
+    .contenedorTercero {
+        width: 20%;
+        margin-right: 4rem;
+    }
+    
+    .contenedorCuarto {
+        width: 20%;
+        margin-right: 5rem;
+    }
+    
+     p {
+        color: white;
+        margin-top: 1rem;
+        text-align: center;
+        font-family: $letraparrafo;
+    }
+}
+
+
+.footerServicios {
+    grid-area: footer;
+}
+@media screen and (max-width:600px) {
+    .contenedorServicios {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "aside"
+            "section"
+            "article"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto auto;
+    }
+
+
+    .asideServicios {
+        margin-top: 10rem;
+    }
+
+    .sectionServicios {
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+
+    .imagenesServicios {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .mainServicios {
+        display: none;
+    }
+
+    .articleServicios h2 {
+        font-size: 1.5rem;
+    }
+}
